@@ -46,9 +46,9 @@ export default function OutlinedCard(props) {
                   return (
                   <>
                   
-                  {item.title}
-                  {item.color}
-                  {item.action}
+                 <div style={{color:"red",}}> {item.title}</div>
+                  <div>{item.color}
+                  {item.action}</div>
                
                   </>
                 )}}

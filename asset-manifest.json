@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/multistep-form/static/css/main.0e206116.css",
-    "main.js": "/multistep-form/static/js/main.40baffa4.js",
-    "static/js/787.452428b0.chunk.js": "/multistep-form/static/js/787.452428b0.chunk.js",
-    "static/media/logo.svg": "/multistep-form/static/media/logo.d1b3f5c74d9b2fb82829eb4d3f1945a0.svg",
-    "index.html": "/multistep-form/index.html",
-    "main.0e206116.css.map": "/multistep-form/static/css/main.0e206116.css.map",
-    "main.40baffa4.js.map": "/multistep-form/static/js/main.40baffa4.js.map",
-    "787.452428b0.chunk.js.map": "/multistep-form/static/js/787.452428b0.chunk.js.map"
+    "main.css": "/reslink-task/static/css/main.0e206116.css",
+    "main.js": "/reslink-task/static/js/main.085ddbaa.js",
+    "static/js/787.452428b0.chunk.js": "/reslink-task/static/js/787.452428b0.chunk.js",
+    "static/media/logo.svg": "/reslink-task/static/media/logo.d1b3f5c74d9b2fb82829eb4d3f1945a0.svg",
+    "index.html": "/reslink-task/index.html",
+    "main.0e206116.css.map": "/reslink-task/static/css/main.0e206116.css.map",
+    "main.085ddbaa.js.map": "/reslink-task/static/js/main.085ddbaa.js.map",
+    "787.452428b0.chunk.js.map": "/reslink-task/static/js/787.452428b0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0e206116.css",
-    "static/js/main.40baffa4.js"
+    "static/js/main.085ddbaa.js"
   ]
 }

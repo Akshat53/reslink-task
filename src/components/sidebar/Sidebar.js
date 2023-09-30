@@ -1,6 +1,7 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@mui/styles";
+import { alpha, styled } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -19,6 +20,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import { pink } from "@mui/material/colors";
 import logo from "../../logo.svg";
+import TextField from "@mui/material/TextField";
 
 const drawerWidth = 240;
 
@@ -35,6 +37,31 @@ const useStyles = makeStyles({
   },
 });
 
+const CssTextField = styled(TextField)({
+  "& label": {
+    color: "white",
+  },
+  "& label.Mui-focused": {
+    color: "white",
+  },
+  "& .MuiInput-underline:after": {
+    borderBottomColor: "white",
+  },
+  "& .MuiOutlinedInput-root": {
+    "& fieldset": {
+      borderColor: "#000",
+      borderRadius: 30,
+      background: "#000",
+    },
+    "&:hover fieldset": {
+      borderColor: "#000",
+    },
+    "&.Mui-focused fieldset": {
+      borderColor: "#000",
+    },
+  },
+});
+
 function ResponsiveDrawer(props) {
   const classes = useStyles();
 
@@ -46,30 +73,60 @@ function ResponsiveDrawer(props) {
   };
 
   const drawer = (
-    <div>
-    
-      <Toolbar >
+    <>
+      <div>
+        <Toolbar>
+          <img src={logo} />
+        </Toolbar>
 
-      <img src={logo} />
-      </Toolbar>
-
-      <Divider />
+        <Divider />
+        <List>
+          {["Dashboard", "Projects", "Staffing", "Messages"].map(
+            (text, index) => (
+              <ListItem key={text} disablePadding>
+                <ListItemButton>
+                  <ListItemIcon>
+                    {index % 2 === 0 ? (
+                      <InboxIcon sx={{ color: "white" }} />
+                    ) : (
+                      <MailIcon sx={{ color: "white" }} />
+                    )}
+                  </ListItemIcon>
+                  <ListItemText primary={text} />
+                </ListItemButton>
+              </ListItem>
+            )
+          )}
+        </List>
+        <Divider />
+      </div>
+      <footer style={{ marginTop: "auto" }}>
       <List>
-        {["Dashboard", "Projects", "Staffing", "Messages"].map(
-          (text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon  sx={{ color: "white"}}/> : <MailIcon  sx={{ color: "white" }} />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          )
-        )}
-      </List>
-      <Divider />
-    </div>
+          {["Support", "Settings"].map(
+            (text, index) => (
+              <ListItem key={text} disablePadding>
+                <ListItemButton>
+                  <ListItemIcon>
+                    {index % 2 === 0 ? (
+                      <InboxIcon sx={{ color: "white" }} />
+                    ) : (
+                      <MailIcon sx={{ color: "white" }} />
+                    )}
+                  </ListItemIcon>
+                  <ListItemText primary={text} />
+                </ListItemButton>
+              </ListItem>
+            )
+          )}
+        </List>
+      </footer>
+      <Divider/>
+      <Box sx={{
+
+      }}>
+
+      </Box>
+    </>
   );
 
   const container =
@@ -96,9 +153,26 @@ function ResponsiveDrawer(props) {
           >
             <MenuIcon sx={{ color: pink[500] }} />
           </IconButton>
-          <Typography variant="h6" noWrap component="div">
-            Responsive drawer
-          </Typography>
+          <Box
+            component="form"
+            sx={{
+              "& > :not(style)": { m: 1, width: "25ch" },
+            }}
+            noValidate
+            autoComplete="off"
+          >
+            <CssTextField
+              id="outlined-basic"
+              label="Search"
+              size="small"
+              variant="outlined"
+              inputProps={{
+                style: {
+                  color: "white",
+                },
+              }}
+            />
+          </Box>
         </Toolbar>
       </AppBar>
       <Box
@@ -120,7 +194,6 @@ function ResponsiveDrawer(props) {
             display: { xs: "block", sm: "none" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
-              width: drawerWidth,
             },
           }}
         >
@@ -133,7 +206,6 @@ function ResponsiveDrawer(props) {
             display: { xs: "none", sm: "block" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
-              width: drawerWidth,
             },
           }}
           open

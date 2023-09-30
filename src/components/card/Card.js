@@ -48,6 +48,7 @@ function AppCard(props) {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
+              marginLeft: "auto",
             }}
           >
             <Box

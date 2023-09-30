@@ -20,29 +20,36 @@ const card2Data = [
     title: "haiof",
     data: [
       {
-        title: "one",
-        color: "#5446456",
-        action: "Pyment",
+        title: "Thermal protective performance and mult",
+        color: "#FDD26E",
+        action: "Resume review",
       },
       {
-        title: "one",
-        color: "#5446456",
-        action: "Pyment",
+        title:
+          "Effect of heat flux and moisture content on the thermal protective performance of outer layer of fire pro",
+        color: "#CD7849",
+        action: "Interview",
       },
       {
-        title: "one",
+        title: "Thermal protective performance and mult",
         color: "#5446456",
-        action: "Pyment",
+        action: "Task",
       },
       {
-        title: "one",
-        color: "#5446456",
-        action: "Pyment",
+        title: "Testing and evaluation of functional textiles",
+        color: "#44C677",
+        action: "Payment",
       },
       {
-        title: "one",
-        color: "#5446456",
-        action: "Pyment",
+        title:
+          "Development of thermal liner for Extreme Heat Protective Clothing",
+        color: "#FFFFFF",
+        action: "Closed",
+      },
+      {
+        title: "Testing and evaluation of functional textiles",
+        color: "#44C677",
+        action: "Payment",
       },
     ],
   },
@@ -50,28 +57,33 @@ const card2Data = [
     title: "haio",
     data: [
       {
-        title: "one",
-        color: "#5446456",
+        color: "#73C2B4",
+        title: "Interview is scheduled for 12PM",
+        action: "6:29PM",
+      },
+      {
+        title: "Applicant applied on Technical researcher",
+        color: "#FDD26E",
         action: "Pyment",
       },
       {
-        title: "one",
-        color: "#5446456",
+        title: "Interview is cancelled",
+        color: "#CD7849",
         action: "Pyment",
       },
       {
-        title: "one",
-        color: "#5446456",
+        title: "Applicant applied on Technical researcher",
+        color: "#FDD26E",
         action: "Pyment",
       },
       {
-        title: "one",
-        color: "#5446456",
+        title: "Recieved Proposal",
+        color: "#44C677",
         action: "Pyment",
       },
       {
-        title: "one",
-        color: "#5446456",
+        title: "Interview is scheduled for 12PM",
+        color: "#73C2B4",
         action: "Pyment",
       },
     ],
@@ -121,41 +133,56 @@ const cardStyle = {
 };
 
 function Home() {
+  const tempData2 = card2Data.map((item, i) => {
+    return {
+      title: item.title,
+      data: item.data.map((item) => {
+        return {
+          ...item,
+          side: i == 0 ? "right" : "left",
+        };
+      }),
+    };
+  });
   return (
     <>
       <Box sx={{ display: "flex" }}>
         <Sidebar />
-        <Box component="main" sx={{ p: 5 }} style={{
-          width: "100%"
-        }}>
+        <Box component="main" sx={{ p: 5 }}>
           <Toolbar />
           <Header />
-          <br></br>
           <Box sx={{ flexGrow: 1 }}>
             <Grid container spacing={2}>
-              {cardData.map((item, i) => {
-                return (
-                  <Grid item sm={12} md={6} lg={3}>
-                    <AppCard data={item} />
-                  </Grid>
-                );
-              })}
+              <Grid item xs={12}>
+                <Grid container spacing={2}>
+                  {cardData.map((item, i) => {
+                    return (
+                      <Grid
+                        item
+                        sm={12}
+                        md={6}
+                        lg={3}
+                        style={{ width: "inherit" }}
+                      >
+                        <AppCard data={item} />
+                      </Grid>
+                    );
+                  })}
+                </Grid>
+              </Grid>
+              <Grid item xs={12}>
+                <Grid container spacing={2}>
+                  {tempData2.map((item, i) => {
+                    return (
+                      <Grid item sm={12} md={6} style={{ width: "inherit" }}>
+                        <Card2 data={item} />
+                      </Grid>
+                    );
+                  })}
+                </Grid>
+              </Grid>
             </Grid>
           </Box>
-          
-          <br></br>
-          <Box sx={{ flexGrow: 1 }}>
-            <Grid container spacing={2}>
-              {card2Data.map((item, i) => {
-                return (
-                  <Grid item sm={12} md={6}>
-                    <Card2 data={item} />
-                  </Grid>
-                );
-              })}
-            </Grid>
-          </Box>
-          {/*  */}
         </Box>
       </Box>
     </>

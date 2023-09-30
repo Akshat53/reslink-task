@@ -8,6 +8,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" exact element={<Home />}></Route>
+          <Route path="/reslink-task" exact element={<Home />}></Route>
         </Routes>
       </BrowserRouter>
     </>

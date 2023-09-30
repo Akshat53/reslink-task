@@ -77,6 +77,7 @@ const card2Data = [
         action: "Pyment",
       },
       {
+        
         title: "Recieved Proposal",
         color: "#44C677",
         action: "Pyment",

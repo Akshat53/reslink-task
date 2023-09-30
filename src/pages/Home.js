@@ -13,8 +13,6 @@ import BookmarkBorderOutlinedIcon from "@mui/icons-material/BookmarkBorderOutlin
 import RemoveRedEyeOutlinedIcon from "@mui/icons-material/RemoveRedEyeOutlined";
 import Card2 from "../components/card/Card2";
 
-const drawerWidth = 240;
-
 const card2Data = [
   {
     title: "haiof",
@@ -77,7 +75,7 @@ const card2Data = [
         action: "Pyment",
       },
       {
-        
+
         title: "Recieved Proposal",
         color: "#44C677",
         action: "Pyment",
@@ -129,9 +127,6 @@ const cardData = [
     ),
   },
 ];
-const cardStyle = {
-  height: "500px",
-};
 
 function Home() {
   const tempData2 = card2Data.map((item, i) => {
@@ -140,7 +135,7 @@ function Home() {
       data: item.data.map((item) => {
         return {
           ...item,
-          side: i == 0 ? "right" : "left",
+          side: i === 0 ? "right" : "left",
         };
       }),
     };

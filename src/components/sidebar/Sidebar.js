@@ -1,7 +1,7 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@mui/styles";
-import { alpha, styled } from "@mui/material/styles";
+import {  styled } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -17,7 +17,6 @@ import ListItemText from "@mui/material/ListItemText";
 import MailIcon from "@mui/icons-material/Mail";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import { pink } from "@mui/material/colors";
 import logo from "../../logo.svg";
 import TextField from "@mui/material/TextField";
@@ -76,7 +75,7 @@ function ResponsiveDrawer(props) {
     <>
       <div>
         <Toolbar>
-          <img src={logo} />
+          <img src={logo} alt="logo" />
         </Toolbar>
 
         <Divider />

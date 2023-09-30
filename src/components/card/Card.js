@@ -4,7 +4,7 @@ import Card from "@mui/material/Card";
 import { Grid, Typography } from "@mui/material";
 
 function AppCard(props) {
-  const { data = {}, style, ...rest } = props;
+  const { data = {} } = props;
 
   return (
     <Box

@@ -5,7 +5,7 @@ import { Grid, Typography } from "@mui/material";
 import AppList from "../list/List";
 
 export default function OutlinedCard(props) {
-  const { data = {}, ...rest } = props;
+  const { data = {} } = props;
   return (
     <Card
       variant="outlined"
@@ -52,7 +52,7 @@ export default function OutlinedCard(props) {
                 >
                   <Grid item xs={8}>
                     <Grid container>
-                      {item.side == "left" && (
+                      {item.side === "left" && (
                         <Grid item xs={2}>
                           <Box
                             style={{
@@ -67,7 +67,7 @@ export default function OutlinedCard(props) {
                       )}
                       <Grid
                         item
-                        xs={item.side == "left" ? 10 : 12}
+                        xs={item.side === "left" ? 10 : 12}
                         zeroMinWidth
                       >
                         <Typography noWrap>{item.title}</Typography>
@@ -76,7 +76,7 @@ export default function OutlinedCard(props) {
                   </Grid>
                   <Grid item xs={4}>
                     <Grid container>
-                      {item.side == "right" && (
+                      {item.side === "right" && (
                         <Grid item xs={2}>
                           <Box
                             style={{
@@ -89,7 +89,7 @@ export default function OutlinedCard(props) {
                           />
                         </Grid>
                       )}
-                      <Grid item xs={item.side == "right" ? 10 : 12}>
+                      <Grid item xs={item.side === "right" ? 10 : 12}>
                         {item.action}
                       </Grid>
                     </Grid>

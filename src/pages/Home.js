@@ -34,7 +34,7 @@ const card2Data = [
         action: "Task",
       },
       {
-        title: "Testing and evaluation of functional textiles",
+        title: "Testing  terrkjahfkafh and evaluation of functional textiles",
         color: "#44C677",
         action: "Payment",
       },

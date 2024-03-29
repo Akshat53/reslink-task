@@ -29,7 +29,7 @@ const card2Data = [
         action: "Interview",
       },
       {
-        title: "Thermal protective performance and mult",
+        title: "Thermal protective new test branch performance and mult",
         color: "#5446456",
         action: "Task",
       },

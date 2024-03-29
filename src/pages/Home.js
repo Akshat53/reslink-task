@@ -18,7 +18,7 @@ const card2Data = [
     title: "haiof",
     data: [
       {
-        title: "Thermal protective performance and mult",
+        title: "Thermal protective performance and mult aaaaa",
         color: "#FDD26E",
         action: "Resume review",
       },
@@ -137,7 +137,7 @@ function Home() {
           ...item,
           side: i === 0 ? "right" : "left",
         };
-      }),
+      }),    
     };
   });
   return (
